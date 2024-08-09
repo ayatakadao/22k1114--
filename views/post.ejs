@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= post.title %></title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1><%= post.title %></h1>
+        <p>投稿者: <%= post.author %></p>
+        <p>投稿日: <%= post.createdAt.toLocaleString() %></p>
+        <div>
+            <%= post.content %>
+        </div>
+        <a href="/">投稿一覧に戻る</a>
+    </div>
+</body>
+</html>

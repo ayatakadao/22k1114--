@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>投稿一覧</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>投稿一覧</h1>
+        <ul>
+            <% posts.forEach(post => { %>
+                <li>
+                    <a href="/posts/<%= post._id %>"><%= post.title %></a>
+                    <p class="author">投稿者: <%= post.author %></p>
+                    <p>投稿日: <%= post.createdAt.toLocaleString() %></p>
+                </li>
+            <% }); %>
+        </ul>
+        <a href="/posts/new">新規投稿</a>
+    </div>
+</body>
+</html>
